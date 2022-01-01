@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "514073791851",
+    "project_id": "chat-e6f65",
+    "storage_bucket": "chat-e6f65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514073791851:android:f88ab239cce8afe55c102e",
+        "android_client_info": {
+          "package_name": "com.yassin.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514073791851-liraf453427op9v1btfu5dp0v62o21fu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yassin.chat",
+            "certificate_hash": "f11bff7884ecc7a835870f468ea3827366b6d144"
+          }
+        },
+        {
+          "client_id": "514073791851-l4b9cfojrk72mpfh7vavpo76do0flpid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMDATuJ8hluD5aXA9sHBSkvAQMqjJBVZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514073791851-l4b9cfojrk72mpfh7vavpo76do0flpid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

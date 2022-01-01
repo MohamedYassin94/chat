@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+import 'package:chat/constants/color_constants.dart';
+import 'package:chat/providers/auth_provider.dart';
+import 'package:provider/provider.dart';
+import '../screens/screens.dart';
+
+class SplashScreen extends StatefulWidget {
+  SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  SplashScreenState createState() => SplashScreenState();
+}
+
+class SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 1), () {
+      // just delay for showing this slash page clearer because it too fast
+      checkSignedIn();
+    });
+  }
+
+  void checkSignedIn() async {
+    AuthProvider authProvider = context.read<AuthProvider>();
+    bool isLoggedIn = await authProvider.isLoggedIn();
+    if (isLoggedIn) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage()),
+      );
+      return;
+    }
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginPage()),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              "images/app_icon.png",
+              width: 100,
+              height: 100,
+            ),
+            SizedBox(height: 20),
+            Container(
+              width: 20,
+              height: 20,
+              child: CircularProgressIndicator(color: ColorConstants.themeColor),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
